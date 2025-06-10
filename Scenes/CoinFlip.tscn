@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=3 uid="uid://dwtfvfkwowlih"]
+
+[ext_resource type="Script" uid="uid://5grbc3q54bnb" path="res://Scripts/MoneyTextUpdate.cs" id="1_e2fha"]
+[ext_resource type="Script" uid="uid://cb5fu21thg7jk" path="res://Scripts/FlipCoin.cs" id="2_t6h4a"]
+[ext_resource type="Script" uid="uid://cxhufkm7cx4ye" path="res://Scripts/BetAmountUpdater.cs" id="3_bmaoj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5p2rb"]
+font_size = 116
+
+[sub_resource type="LabelSettings" id="LabelSettings_t6h4a"]
+font_size = 31
+
+[node name="Root" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="CenterContainer/Control"]
+layout_mode = 2
+offset_left = -240.0
+offset_top = -314.0
+offset_right = 239.0
+offset_bottom = -156.0
+text = "Coin Flip"
+label_settings = SubResource("LabelSettings_5p2rb")
+
+[node name="CoinFlipContainer" type="ColorRect" parent="CenterContainer/Control"]
+layout_mode = 2
+offset_left = -297.0
+offset_top = -108.0
+offset_right = 301.0
+offset_bottom = 189.0
+color = Color(0.194349, 0.194349, 0.194349, 1)
+
+[node name="MoneyText" type="Label" parent="CenterContainer/Control/CoinFlipContainer"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 10.0
+offset_right = 252.0
+offset_bottom = 54.0
+text = "Money: {Money}"
+label_settings = SubResource("LabelSettings_t6h4a")
+script = ExtResource("1_e2fha")
+
+[node name="FlipButton" type="Button" parent="CenterContainer/Control/CoinFlipContainer"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 188.0
+offset_right = 243.0
+offset_bottom = 287.0
+theme_override_font_sizes/font_size = 46
+text = "Flip Coin"
+script = ExtResource("2_t6h4a")
+
+[node name="BetAmountTextbox" type="LineEdit" parent="CenterContainer/Control/CoinFlipContainer"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 110.0
+offset_right = 243.0
+offset_bottom = 175.0
+theme_override_font_sizes/font_size = 30
+placeholder_text = "Bet Amount"
+alignment = 1
+max_length = 7
+script = ExtResource("3_bmaoj")
+
+[connection signal="button_up" from="CenterContainer/Control/CoinFlipContainer/FlipButton" to="CenterContainer/Control/CoinFlipContainer/FlipButton" method="_on_button_up"]
