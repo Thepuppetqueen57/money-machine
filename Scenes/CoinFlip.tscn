@@ -5,14 +5,14 @@
 [ext_resource type="Script" uid="uid://cxhufkm7cx4ye" path="res://Scripts/BetAmountUpdater.cs" id="3_bmaoj"]
 [ext_resource type="Script" uid="uid://b0pc1t5rc6c4v" path="res://Scripts/Add5ButtonUpdater.cs" id="4_pdtl8"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_pdtl8"]
+font_size = 36
+
 [sub_resource type="LabelSettings" id="LabelSettings_5p2rb"]
 font_size = 116
 
 [sub_resource type="LabelSettings" id="LabelSettings_t6h4a"]
 font_size = 31
-
-[sub_resource type="LabelSettings" id="LabelSettings_pdtl8"]
-font_size = 36
 
 [node name="Root" type="Control"]
 layout_mode = 3
@@ -21,6 +21,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="VersionLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 13.0
+offset_right = 249.0
+offset_bottom = 63.0
+text = "Version: 1.1.0"
+label_settings = SubResource("LabelSettings_pdtl8")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -92,17 +103,6 @@ theme_override_font_sizes/font_size = 156
 disabled = true
 text = "+5"
 script = ExtResource("4_pdtl8")
-
-[node name="VersionLabel" type="Label" parent="CenterContainer/Control"]
-layout_mode = 0
-offset_left = -559.0
-offset_top = -311.0
-offset_right = -327.0
-offset_bottom = -261.0
-text = "Version: 1.1.0"
-label_settings = SubResource("LabelSettings_pdtl8")
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [connection signal="button_up" from="CenterContainer/Control/CoinFlipContainer/FlipButton" to="CenterContainer/Control/CoinFlipContainer/FlipButton" method="_on_button_up"]
 [connection signal="button_up" from="CenterContainer/Control/CoinFlipContainer/Add5Button" to="CenterContainer/Control/CoinFlipContainer/Add5Button" method="_on_button_up"]
