@@ -93,7 +93,7 @@ disabled = true
 text = "+5"
 script = ExtResource("4_pdtl8")
 
-[node name="Label" type="Label" parent="CenterContainer/Control"]
+[node name="VersionLabel" type="Label" parent="CenterContainer/Control"]
 layout_mode = 0
 offset_left = -559.0
 offset_top = -311.0
