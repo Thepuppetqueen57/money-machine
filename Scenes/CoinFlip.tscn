@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dwtfvfkwowlih"]
+[gd_scene load_steps=8 format=3 uid="uid://dwtfvfkwowlih"]
 
 [ext_resource type="Script" uid="uid://5grbc3q54bnb" path="res://Scripts/MoneyTextUpdate.cs" id="1_e2fha"]
 [ext_resource type="Script" uid="uid://cb5fu21thg7jk" path="res://Scripts/FlipCoin.cs" id="2_t6h4a"]
 [ext_resource type="Script" uid="uid://cxhufkm7cx4ye" path="res://Scripts/BetAmountUpdater.cs" id="3_bmaoj"]
 [ext_resource type="Script" uid="uid://b0pc1t5rc6c4v" path="res://Scripts/Add5ButtonUpdater.cs" id="4_pdtl8"]
+[ext_resource type="Script" uid="uid://ccxengwxk4fpn" path="res://Scripts/SetBetAmountButton.cs" id="5_ftewk"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pdtl8"]
 font_size = 91
@@ -70,7 +71,7 @@ metadata/_tab_index = 0
 [node name="FlipButton" type="Button" parent="Minigames/TabContainer/Coin Flip"]
 layout_mode = 0
 offset_left = 11.4375
-offset_top = 199.8125
+offset_top = 291.8125
 offset_right = 469.4375
 offset_bottom = 511.8125
 theme_override_font_sizes/font_size = 91
@@ -86,18 +87,6 @@ offset_bottom = 132.0
 text = "Money: {Money}"
 label_settings = SubResource("LabelSettings_t6h4a")
 script = ExtResource("1_e2fha")
-
-[node name="BetAmountTextbox" type="LineEdit" parent="Minigames"]
-layout_mode = 0
-offset_left = 10.5625
-offset_top = 173.1875
-offset_right = 469.0
-offset_bottom = 251.0
-theme_override_font_sizes/font_size = 30
-placeholder_text = "Bet Amount"
-alignment = 1
-max_length = 7
-script = ExtResource("3_bmaoj")
 
 [node name="Add5Button" type="Button" parent="Minigames"]
 layout_mode = 1
@@ -117,5 +106,71 @@ disabled = true
 text = "+5"
 script = ExtResource("4_pdtl8")
 
+[node name="BetAmount" type="Control" parent="Minigames"]
+anchors_preset = 0
+offset_left = 200.0
+offset_top = 233.0
+offset_right = 240.0
+offset_bottom = 273.0
+
+[node name="BetAmountTextbox" type="LineEdit" parent="Minigames/BetAmount"]
+layout_mode = 0
+offset_left = -189.4375
+offset_top = -59.8125
+offset_right = 269.0
+offset_bottom = 18.0
+theme_override_font_sizes/font_size = 30
+placeholder_text = "Bet Amount"
+alignment = 1
+max_length = 7
+script = ExtResource("3_bmaoj")
+
+[node name="25" type="Button" parent="Minigames/BetAmount"]
+layout_mode = 0
+offset_left = -189.0
+offset_top = 31.0
+offset_right = -85.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 26
+text = "25%"
+script = ExtResource("5_ftewk")
+MoneyPercentage = 25.0
+
+[node name="50" type="Button" parent="Minigames/BetAmount"]
+layout_mode = 0
+offset_left = -72.0
+offset_top = 31.0
+offset_right = 32.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 26
+text = "50%"
+script = ExtResource("5_ftewk")
+MoneyPercentage = 50.0
+
+[node name="75" type="Button" parent="Minigames/BetAmount"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 31.0
+offset_right = 151.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 26
+text = "75%"
+script = ExtResource("5_ftewk")
+MoneyPercentage = 75.0
+
+[node name="100" type="Button" parent="Minigames/BetAmount"]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 31.0
+offset_right = 269.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 26
+text = "100%"
+script = ExtResource("5_ftewk")
+
 [connection signal="button_up" from="Minigames/TabContainer/Coin Flip/FlipButton" to="Minigames/TabContainer/Coin Flip/FlipButton" method="_on_button_up"]
 [connection signal="button_up" from="Minigames/Add5Button" to="Minigames/Add5Button" method="_on_button_up"]
+[connection signal="button_up" from="Minigames/BetAmount/25" to="Minigames/BetAmount/25" method="_on_button_up"]
+[connection signal="button_up" from="Minigames/BetAmount/50" to="Minigames/BetAmount/50" method="_on_button_up"]
+[connection signal="button_up" from="Minigames/BetAmount/75" to="Minigames/BetAmount/75" method="_on_button_up"]
+[connection signal="button_up" from="Minigames/BetAmount/100" to="Minigames/BetAmount/100" method="_on_button_up"]
