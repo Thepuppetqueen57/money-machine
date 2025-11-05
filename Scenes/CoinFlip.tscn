@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dwtfvfkwowlih"]
+[gd_scene load_steps=12 format=3 uid="uid://dwtfvfkwowlih"]
 
 [ext_resource type="Script" uid="uid://5grbc3q54bnb" path="res://Scripts/MoneyTextUpdate.cs" id="1_e2fha"]
 [ext_resource type="Script" uid="uid://cb5fu21thg7jk" path="res://Scripts/FlipCoin.cs" id="2_t6h4a"]
@@ -8,6 +8,30 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_pdtl8"]
 font_size = 91
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v3nta"]
+bg_color = Color(0.15127608, 0.15127608, 0.15127608, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3069225, 0.30692276, 0.30692258, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6acc7"]
+bg_color = Color(0.103743516, 0.10374353, 0.103743516, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.21950102, 0.21950102, 0.21950102, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="LabelSettings" id="LabelSettings_t6h4a"]
 font_size = 50
@@ -91,6 +115,212 @@ offset_bottom = 511.8125
 theme_override_font_sizes/font_size = 91
 text = "Flip Coin"
 script = ExtResource("2_t6h4a")
+
+[node name="Mines" type="ColorRect" parent="Minigames/TabContainer"]
+visible = false
+layout_mode = 2
+color = Color(0.194349, 0.194349, 0.194349, 1)
+metadata/_tab_index = 1
+
+[node name="StartButton" type="Button" parent="Minigames/TabContainer/Mines"]
+layout_mode = 0
+offset_left = 11.4375
+offset_top = 291.8125
+offset_right = 469.4375
+offset_bottom = 511.8125
+theme_override_font_sizes/font_size = 91
+text = "Start"
+
+[node name="MineField" type="GridContainer" parent="Minigames/TabContainer/Mines"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -511.4375
+offset_top = -247.5
+offset_right = 4.5625
+offset_bottom = 268.5
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.9600024, 0.9600024)
+columns = 5
+
+[node name="Mine1" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine2" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine3" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine4" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine5" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine6" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine7" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine8" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine9" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine10" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine11" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine12" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine13" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine14" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine15" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine16" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine17" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine18" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine19" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine20" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine21" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine22" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine23" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine24" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
+
+[node name="Mine25" type="Button" parent="Minigames/TabContainer/Mines/MineField"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v3nta")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6acc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v3nta")
 
 [node name="MoneyText" type="Label" parent="Minigames"]
 layout_mode = 1
@@ -185,6 +415,7 @@ text = "100%"
 script = ExtResource("5_ftewk")
 
 [connection signal="button_up" from="Minigames/TabContainer/Coin Flip/FlipButton" to="Minigames/TabContainer/Coin Flip/FlipButton" method="_on_button_up"]
+[connection signal="button_up" from="Minigames/TabContainer/Mines/StartButton" to="Minigames/TabContainer/Mines/StartButton" method="_on_button_up"]
 [connection signal="button_up" from="Minigames/Add5Button" to="Minigames/Add5Button" method="_on_button_up"]
 [connection signal="button_up" from="Minigames/BetAmount/25" to="Minigames/BetAmount/25" method="_on_button_up"]
 [connection signal="button_up" from="Minigames/BetAmount/50" to="Minigames/BetAmount/50" method="_on_button_up"]

@@ -12,5 +12,7 @@ public partial class FlipCoin : Button {
         } else if (WinOrLose == 1) {
             Globals.Money += BetAmount;
         }
+
+        Globals.MinesGameActive = false;
     }
 }
